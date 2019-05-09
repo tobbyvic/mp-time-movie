@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F36766",
+    "navigationBarTitleText": "TIME",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#F36766",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/images/movie.png",
+        "selectedIconPath": "./assets/images/movie_active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "首页",
+        "iconPath": "./assets/images/trefresh.png",
+        "selectedIconPath": "./assets/images/trefresh_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

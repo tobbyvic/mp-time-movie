@@ -1,0 +1,9 @@
+<!-- logs.wxml -->
+<view>
+  <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('http://img31.mtime.cn/ph/2014/09/01/170748.64755972_1280X720X2.jpg')">
+    <view class='padding-xl text-white'>
+      <view class='padding-xs text-xl'>我和春天有个约会</view>
+      <view class='padding-xs'>I Have a Date with Spring</view>
+    </view>
+  </view>
+</view>
