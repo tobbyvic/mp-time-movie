@@ -1,2 +1,68 @@
-<!--pages/coming/coming.wxml-->
-<text>pages/coming/coming.wxml</text>
+<view>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="cu-card article">
+    <view wx:for="{{movieList}}" bindtap="goToDetail" wx:key class="cu-item shadow" wx:for-index="id" wx:for-item="item" style="padding-top: 30rpx;" data-item="{{item}}">
+      <view class="content">
+        <image src="{{item.image}}" mode="aspectFill" style="height: 11.2em"></image>
+        <view class="desc" style="font-size: 26rpx">
+          <view class="desc-row">
+            <view class="text-title" style="font-size: 28rpx;font-weight: 600;color: #000000;">
+              {{item.title}}
+            </view>
+            <view class='cu-tag bg-red sm radius'>
+              {{item.type}}
+            </view>
+            <!-- <view class='cu-tag bg-green light sm round'>戏精系列</view> -->
+          </view>
+          <view class="desc-row">
+            <view class="text-title">演员</view>
+            <view class='cu-tag bg-gray light sm radius'>{{item.actor1}}</view>
+            <view class='cu-tag bg-gray light sm radius'>{{item.actor2}}</view>
+            <!-- <view class='cu-tag bg-gray light sm round'>戏精系列</view> -->
+          </view>
+          <!-- <view class="cu-capsule round">
+            <view class='cu-tag bg-blue '>说明</view>
+            <view class="cu-tag line-blue">123</view>
+          </view> -->
+          <view class="desc-row">
+            <view class="text-title">时长</view>
+            <view class='cu-tag bg-gray light sm radius'>暂无</view>
+          </view>
+          <view class="desc-row">
+            <view class="text-title">导演</view>
+            <view class='cu-tag bg-gray light sm radius'>{{item.director}}</view>
+          </view>
+          <view class="desc-row">
+            <view class="text-title">评分</view>
+            <view class='cu-tag bg-green light sm radius'>暂无</view>
+            <!-- <view class='cu-tag bg-green light sm round'>戏精系列</view> -->
+          </view>
+          <view class="text-title">上映时间： {{item.rYear}}-{{item.rMonth}}-{{item.rDay}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="cu-bar bg-white margin-top">
+    <view class='action'>
+      <text class='icon-title text-blue'></text>
+      弹框加载
+    </view>
+    <view class='action'>
+      <button class='cu-btn bg-green shadow' bindtap='getMovieList'>点我</button>
+    </view>
+  </view> -->
+  <view class='cu-load load-modal' wx:if="{{loadModal}}">
+    <!-- <view class='icon-emojifill text-orange'></view> -->
+    <!-- <image src='/images/logo.png' class='png' mode='aspectFit'></image> -->
+    <view class='gray-text'>加载中...</view>
+  </view>
+</view>

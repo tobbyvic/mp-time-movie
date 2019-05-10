@@ -14,9 +14,9 @@
         {{item}}
       </view>
     </view>
-    <view>
+    <view style="display: flex;align-items: center;justify-content: center;">
       <text class='text-black text-bold'>{{ movieDetail.titleCn || '--'}}</text>
-      <view class='cu-tag bg-green lignt sm radius'>{{ movieDetail.rating }}</view>
+      <view class='cu-tag bg-green lignt sm radius'>{{ (movieDetail.rating && movieDetail.rating !== '-1.0') ? movieDetail.rating : '--' }}</view>
     </view>
     <view class='padding'>
       <view class="cu-avatar round lg margin-left" wx:for="{{ movieDetail.actorList || [] }}" wx:key wx:for-item="item" style="background-image:url({{item.actorImg}});">
@@ -31,7 +31,7 @@
       <view class="actor-item">
         <image mode="aspectFill" class="image-person" src="{{movieDetail.director.directorImg}}" />
         <view style="font-size: 24rpx;font-weight: 600">
-          {{ movieDetail.director.directorName || '--'}}
+          导演:{{ movieDetail.director.directorName || '--'}}
         </view>
       </view>
       <view class="actor-item" wx:for="{{movieDetail.actorList || []}}" wx:key wx:for-item="item">
@@ -42,10 +42,17 @@
     <view class="padding" style="text-align: left">
       <text class='text-black text-left'>剧照</text>
     </view>
-    <view class="padding movie-list">
+    <!-- <view class="padding movie-list">
       <view class="movie-item" wx:for="{{movieDetail.images || []}}" wx:key wx:for-item="item">
         <image mode="aspectFill" class="image-person" src="{{item}}" />
       </view>
+    </view> -->
+    <view class="padding">
+      <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{movieDetail.images || []}}" wx:key wx:for-item="item">
+          <image src="{{item}}" mode='aspectFill'></image>
+        </swiper-item>
+      </swiper>
     </view>
     <!-- <view class="padding" style="text-align: left">
       <text class='text-black text-left'>预告片</text>
