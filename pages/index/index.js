@@ -105,5 +105,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     });
+  },
+  goToDetail: function(e) {
+    console.log(e);
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + e.currentTarget.dataset.item.id//实际路径要写全
+    })
   }
 });

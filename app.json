@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/detail/detail",
+    "pages/coming/coming"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,13 +19,13 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "在映电影",
         "iconPath": "./assets/images/movie.png",
         "selectedIconPath": "./assets/images/movie_active.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "首页",
+        "pagePath": "pages/coming/coming",
+        "text": "即将上映",
         "iconPath": "./assets/images/trefresh.png",
         "selectedIconPath": "./assets/images/trefresh_active.png"
       }
