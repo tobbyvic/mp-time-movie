@@ -5,7 +5,8 @@ import request from "../../common/request";
 Page({
   data: {
     movieId: -1,
-    movieDetail: {}
+    movieDetail: {},  // 影片详情
+    movieActors: {}
   },
   onLoad: function(option) {
     // this.setData({
@@ -17,19 +18,32 @@ Page({
     this.setData({
       movieId: parseInt(option.id)
     });
+
     this.getMovieDetail()
       .then(res => {
         console.log(res);
         this.setData({
-          movieDetail: {...res}
-        })
+          movieDetail: { ...res }
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    this.getActors()
+      .then(res => {
+        console.log(res);
+        this.setData({
+          movieActors: { ...res }
+        });
       })
       .catch(err => {
         console.log(err);
       });
   },
-
-  // 获取影片详情
+  /**
+   * 获取影片详情
+   */
   getMovieDetail: function() {
     const locationId = wx.getStorageSync("locationId");
 
@@ -44,10 +58,19 @@ Page({
         });
     });
   },
-  //
-  goOpenUrl: function() {
-    wx.navigateTo({
-      url: "http://vfx.mtime.cn/Video/2019/04/03/mp4/190403103412401676.mp4"
-    })
+  /**
+   * 获取演职员表
+   */
+  getActors: function() {
+    return new Promise((resolve, reject) => {
+      request
+        .get(`/Movie/MovieCreditsWithTypes.api`, { movieId: this.data.movieId })
+        .then(res => {
+          resolve(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    });
   }
 });

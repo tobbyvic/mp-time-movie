@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/detail/detail",
-    "pages/coming/coming"
+    "pages/coming/coming",
+    "pages/cast/cast"
   ],
   "window": {
     "backgroundTextStyle": "light",

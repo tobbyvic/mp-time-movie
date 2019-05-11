@@ -76,3 +76,9 @@
   flex: none;
   margin-right: 10rpx;
 }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}

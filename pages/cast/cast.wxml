@@ -1,0 +1,17 @@
+<!-- pages/cast/cast.wxml -->
+<view>
+    <view wx:for="{{movieActors.types || []}}" wx:key wx:for-item="item">
+        <view class="cu-bar bg-white solid-bottom">
+            <view class="action">
+                <text class="cuIcon-title text-blue"></text>
+                {{ item.typeName }}
+            </view>
+        </view>
+        <view class="padding actor-list">
+            <view class="actor-item" wx:for="{{item.persons || []}}" wx:key wx:for-item="element">
+                <image mode="aspectFill" class="image-person" src="{{element.image}}" />
+                <view style="font-size: 24rpx;color: #707070">{{ element.name || '--'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,9 +1,15 @@
 <!-- logs.wxml -->
 <view class="wrapper">
   <view class="bg-img  padding-xl img-wrapper" style="height: 460rpx;background-image: url('{{ movieDetail.images[0] }}')">
-    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <view style="color: #ffffff;font-size: 30rpx;">返回</view>
-      <!-- <view class='cu-tag bg-white xl radius'>返回</view> -->
+    <!-- <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <button class="cu-btn icon">
+        <text class="cuIcon-emojifill"></text>
+        返回
+      </button>
+    </navigator> -->
+    <navigator class="action" open-type="navigateBack" delta="1" hover-class="none" style="color: #ffffff;">
+      <text class="cuIcon-back"></text>
+      <text class="text-df">返回</text>
     </navigator>
     <image mode="aspectFill" src="{{ movieDetail.image}}" />
   </view>
@@ -16,7 +22,9 @@
     </view>
     <view style="display: flex;align-items: center;justify-content: center;">
       <text class='text-black text-bold'>{{ movieDetail.titleCn || '--'}}</text>
-      <view class='cu-tag bg-green lignt sm radius'>{{ (movieDetail.rating && movieDetail.rating !== '-1.0') ? movieDetail.rating : '--' }}</view>
+      <view class='cu-tag bg-green lignt sm radius'>
+        {{ (movieDetail.rating && movieDetail.rating !== '-1.0') ? movieDetail.rating : '--' }}
+      </view>
     </view>
     <view class='padding'>
       <view class="cu-avatar round lg margin-left" wx:for="{{ movieDetail.actorList || [] }}" wx:key wx:for-item="item" style="background-image:url({{item.actorImg}});">
@@ -24,8 +32,12 @@
       </view>
     </view>
     <view class="text-left desc-text padding">{{ movieDetail.content || '--'}}</view>
-    <view class="padding" style="text-align: left;">
+    <view class="padding flex-between">
       <text class='text-black text-left'>演职员</text>
+      <navigator class="action" url="/pages/cast/cast?id={{movieId}}" delta="1" hover-class="none" style="display: flex;align-items: center;">
+        <text class="text-df">详情</text>
+        <text class="cuIcon-right"></text>
+      </navigator>
     </view>
     <view class="padding actor-list">
       <view class="actor-item">
