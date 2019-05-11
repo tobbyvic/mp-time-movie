@@ -1,0 +1,34 @@
+/* pages/guide/guide.wxss */
+.mask {
+  opacity: 0.3;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.text {
+  width: 100%;
+  padding: 25px;
+  bottom: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #ffffff;
+  font-size: 32rpx;
+}
+
+.audio-icon {
+  font-size: 46rpx;
+  width: 34rpx;
+  line-height: 38rpx;
+  color: #ffffff;
+  padding: 10rpx;
+  margin: 10rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+}

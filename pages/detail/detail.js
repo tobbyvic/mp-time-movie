@@ -30,16 +30,6 @@ Page({
         console.log(err);
       });
 
-    this.getActors()
-      .then(res => {
-        console.log(res);
-        this.setData({
-          movieActors: { ...res }
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
   },
   /**
    * 获取影片详情
@@ -58,19 +48,12 @@ Page({
         });
     });
   },
+  
+
   /**
-   * 获取演职员表
+   * 前往演职员表
    */
-  getActors: function() {
-    return new Promise((resolve, reject) => {
-      request
-        .get(`/Movie/MovieCreditsWithTypes.api`, { movieId: this.data.movieId })
-        .then(res => {
-          resolve(res.data);
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    });
+  goToCast: function() {
+    
   }
 });

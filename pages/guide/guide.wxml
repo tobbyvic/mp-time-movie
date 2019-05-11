@@ -1,0 +1,16 @@
+<!-- pages/guide/guide.wxml -->
+<view class="bg-img  padding-xl img-wrapper" style="padding:0;width: 100vw;height: 100vh;background-image: url('https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302&device=mobile')">
+    <view class="mask"></view>
+    <view class="text">
+        <view class="text-left padding">{{ oneRow.hitokoto }}</view>
+        <view class="text-right padding">——《{{ oneRow.from }}》</view>
+        <view class="padding">
+            <button bindtap="goToIndex" class="cu-btn block line-white lg">走向电影时光</button>
+        </view>
+        <!-- <navigator class="action padding" url="/pages/index/index" delta="1" hover-class="none">
+            <button bindtap="goToIndex" class="cu-btn block line-white lg">走向电影时光</button>
+        </navigator> -->
+    </view>
+    <text wx:if="{{audioPlay}}" bindtap="switchAudio" class="audio-icon cuIcon-notificationfill"></text>
+    <text wx:else bindtap="switchAudio" bindtap="switchAudio" class="audio-icon cuIcon-notificationforbidfill"></text>
+</view>

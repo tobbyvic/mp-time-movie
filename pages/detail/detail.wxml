@@ -13,7 +13,7 @@
     </navigator>
     <image mode="aspectFill" src="{{ movieDetail.image}}" />
   </view>
-  <view class='solid-bottom text-xl padding' style="text-align: center;margin-top: 160rpx;">
+  <view class='solid-bottom text-xl padding' style="text-align: center;margin-top: 210rpx;">
     <view class='padding'>
       <text class='text-gray' style="font-size: 28rpx">标签:</text>
       <view class='cu-tag bg-yellow md radius' wx:for="{{movieDetail.type || []}}" wx:key wx:for-item="item">
