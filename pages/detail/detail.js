@@ -43,11 +43,6 @@ Page({
           console.log(err);
         });
     });
-  },
-  //
-  goOpenUrl: function() {
-    wx.navigateTo({
-      url: "http://vfx.mtime.cn/Video/2019/04/03/mp4/190403103412401676.mp4"
-    })
   }
+
 });
