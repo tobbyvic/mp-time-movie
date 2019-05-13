@@ -5,7 +5,8 @@
     "pages/detail/detail",
     "pages/coming/coming",
     "pages/cast/cast",
-    "pages/poster/poster"
+    "pages/poster/poster",
+    "pages/one/one"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,6 +27,11 @@
         "pagePath": "pages/coming/coming",
         "iconPath": "./assets/images/trefresh.png",
         "selectedIconPath": "./assets/images/trefresh_red.png"
+      },
+      {
+        "pagePath": "pages/one/one",
+        "iconPath": "./assets/images/article-fill.png",
+        "selectedIconPath": "./assets/images/article-fill_active.png"
       }
     ]
   },

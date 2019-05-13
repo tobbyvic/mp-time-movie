@@ -1,0 +1,11 @@
+<!-- pages/one/one.wxml -->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="padding bg-white margin">
+    <view class="solid-bottom padding" style="display: flex; justify-content: space-between;">
+        <text class="text-left text-black">{{ todayArticle.title }}</text>
+        <text class="text-right text-sm">{{ todayArticle.author }}</text>
+    </view>
+    <view class="padding">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+</view>
