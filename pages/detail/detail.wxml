@@ -98,11 +98,12 @@
                 <view class='cu-tag bg-green lignt sm radius'>{{ item.rating }}</view>
               </view>
               <view class="text-left text-black text-content text-df">{{ item.title }}</view>
-              <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+              <view class="text-left text-gray text-content text-df text-sm">{{ item.content }}</view>
+              <!-- <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
                 <view class="flex">
                   <view class="flex-sub text-left">{{ item.content }}</view>
                 </view>
-              </view>
+              </view> -->
               <view class="margin-top-sm flex justify-between">
                 <view class="text-gray text-sm flex justify-between">{{ item.modifyTime }}</view>
                 <view>
