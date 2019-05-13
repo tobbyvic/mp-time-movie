@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/detail/detail",
     "pages/coming/coming",
-    "pages/cast/cast"
+    "pages/cast/cast",
+    "pages/poster/poster"
   ],
   "window": {
     "backgroundTextStyle": "light",

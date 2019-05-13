@@ -51,8 +51,12 @@
         <view style="font-size: 24rpx;color: #707070">{{ item.actor || '--'}}</view>
       </view>
     </view>
-    <view class="padding" style="text-align: left">
+    <view class="padding flex-between">
       <text class='text-black text-left'>剧照</text>
+      <navigator class="action" url="/pages/poster/poster?id={{movieId}}" delta="1" hover-class="none" style="display: flex;align-items: center;">
+        <text class="text-df">详情</text>
+        <text class="cuIcon-right"></text>
+      </navigator>
     </view>
     <!-- <view class="padding movie-list">
       <view class="movie-item" wx:for="{{movieDetail.images || []}}" wx:key wx:for-item="item">

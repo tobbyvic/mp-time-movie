@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "电影剧照",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#Ec008c",
+  "enablePullDownRefresh": false
+}
