@@ -5,7 +5,8 @@ import request from "../../common/request";
 Page({
   data: {
     movieId: -1,
-    movieDetail: {}
+    movieDetail: {},  // 影片详情
+    movieActors: {}
   },
   onLoad: function(option) {
     // this.setData({
@@ -17,19 +18,22 @@ Page({
     this.setData({
       movieId: parseInt(option.id)
     });
+
     this.getMovieDetail()
       .then(res => {
         console.log(res);
         this.setData({
-          movieDetail: {...res}
-        })
+          movieDetail: { ...res }
+        });
       })
       .catch(err => {
         console.log(err);
       });
-  },
 
-  // 获取影片详情
+  },
+  /**
+   * 获取影片详情
+   */
   getMovieDetail: function() {
     const locationId = wx.getStorageSync("locationId");
 
@@ -43,6 +47,14 @@ Page({
           console.log(err);
         });
     });
+  },
+  
+
+  /**
+   * 前往演职员表
+   */
+  goToCast: function() {
+    
   }
 
 });

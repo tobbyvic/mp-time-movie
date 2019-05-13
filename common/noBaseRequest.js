@@ -37,7 +37,7 @@ class Request {
   
   const request = new Request({
     baseURL: 'https://ticket-api-m.mtime.cn',
-    withBaseURL: true
+    withBaseURL: false
   })
   
   export default request

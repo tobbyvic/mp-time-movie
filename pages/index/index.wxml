@@ -13,7 +13,7 @@
   <view class="cu-card article">
     <view wx:for="{{movieList}}" bindtap="goToDetail" wx:key class="cu-item shadow" wx:for-index="id" wx:for-item="item" style="padding-top: 30rpx;" data-item="{{item}}">
       <view class="content">
-        <image src="{{item.img}}" mode="aspectFill" style="height: 11.2em"></image>
+        <image src="{{item.img}}" mode="aspectFill" style="width: 300rpx;height: 420rpx"></image>
         <view class="desc" style="font-size: 26rpx">
           <view class="desc-row">
             <view class="text-title" style="font-size: 28rpx;font-weight: 600;color: #000000;">

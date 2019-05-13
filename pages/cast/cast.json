@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "演职员详情",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#Ec008c",
+  "enablePullDownRefresh": false
+}

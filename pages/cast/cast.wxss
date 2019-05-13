@@ -1,0 +1,21 @@
+/* pages/cast/cast.wxss */
+.actor-list {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  height: 432rpx;
+}
+
+.actor-item {
+  display: inline-flex;
+  flex-flow: column;
+  width: 240rpx;
+  height: 400rpx;
+  line-height: 40rpx;
+  flex: none;
+  margin-right: 10rpx;
+}
+
+.image-person {
+    width: 100%;
+  }
