@@ -1,0 +1,20 @@
+<!--pages/face/face.wxml-->
+<view class="container">
+  <!-- 没有用户信息，显示遮罩 -->
+  <view class="shadow" wx:if="{{!hasUserInfo}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">请先授权</button>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+  <!-- 有用户信息 -->
+  <view class="content" wx:if="{{hasUserInfo}}">
+    <canvas canvas-id="canvas" class="avatar-canvas"></canvas>
+  </view>
+  <view class="btn-group">
+    <button class="s-btn light" bindtap="changeImg">更改图片</button>
+    <!-- <button class="s-btn" bindtap="saveAvatar">保存头像</button> -->
+  </view>
+  <!-- <van-button type="primary">按钮</van-button> -->
+</view>

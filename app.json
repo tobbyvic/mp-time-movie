@@ -6,7 +6,9 @@
     "pages/coming/coming",
     "pages/cast/cast",
     "pages/poster/poster",
-    "pages/one/one"
+    "pages/one/one",
+    "pages/face/face",
+    "pages/cut/cut"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,6 +32,11 @@
       },
       {
         "pagePath": "pages/one/one",
+        "iconPath": "./assets/images/article-fill.png",
+        "selectedIconPath": "./assets/images/article-fill_active.png"
+      },
+      {
+        "pagePath": "pages/face/face",
         "iconPath": "./assets/images/article-fill.png",
         "selectedIconPath": "./assets/images/article-fill_active.png"
       }
