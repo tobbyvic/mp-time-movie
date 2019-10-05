@@ -9,7 +9,8 @@ const app = getApp();
 
 const device = wx.getSystemInfoSync();
 const width = device.windowWidth;
-const height = device.windowHeight - 50;
+const height = device.windowHeight - 150;
+
 Page({
   /**
    * 页面的初始数据
@@ -41,6 +42,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function() {
+    console.log(device);
+
     const { cropperOpt } = this.data;
 
     cropperOpt.boundStyle.color = "#04b00f";
